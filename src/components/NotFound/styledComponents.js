@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export const NotFoundContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  justify-content: center;
 `
 
 export const NotFoundHeading = styled.h1`
@@ -23,3 +23,5 @@ export const Img = styled.img`
   height: 250px;
   width: 250px;
 `
+
+export default NotFoundContainer
