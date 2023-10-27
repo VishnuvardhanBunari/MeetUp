@@ -62,14 +62,14 @@ export const RegisterButton = styled.button`
   background-color: #3b82f6;
   color: #ffffff;
   font-family: 'Roboto';
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  margin-top: 20px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 6px;
-  margin-top: 20px;
-  border: none;
-  outline: none;
 `
 export const ErrorMsg = styled.p`
   color: #ff0b37;
