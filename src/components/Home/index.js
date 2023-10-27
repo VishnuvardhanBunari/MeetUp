@@ -12,7 +12,30 @@ import {
   Image,
   Name,
   Topic,
-} from './style'
+} from './styledComponents'
+
+const topicsList = [
+  {
+    id: 'ARTS_AND_CULTURE',
+    displayText: 'Arts and Culture',
+  },
+  {
+    id: 'CAREER_AND_BUSINESS',
+    displayText: 'Career and Business',
+  },
+  {
+    id: 'EDUCATION_AND_LEARNING',
+    displayText: 'Education and Learning',
+  },
+  {
+    id: 'FASHION_AND_BEAUTY',
+    displayText: 'Fashion and Learning',
+  },
+  {
+    id: 'GAMES',
+    displayText: 'Games',
+  },
+]
 
 const Home = props => {
   const onRegister = () => {
@@ -25,6 +48,8 @@ const Home = props => {
       {value => {
         const {isRegistered, name, topic} = value
         console.log(isRegistered)
+
+        const option = topicsList.filter(each => each.id === topic)
         return (
           <div>
             <Header />
@@ -32,7 +57,7 @@ const Home = props => {
             {isRegistered === true ? (
               <HomeContainer>
                 <Name>Hello {name}</Name>
-                <Topic>Welcome to {topic}</Topic>
+                <Topic>Welcome to {option[0].displayText}</Topic>
                 <Image
                   src="https://assets.ccbp.in/frontend/react-js/meetup/meetup-img.png"
                   alt="meetup"
