@@ -13,7 +13,7 @@ import {
   Select,
   RegisterButton,
   ErrorMsg,
-} from './style'
+} from './styledComponents'
 
 const topicsList = [
   {
@@ -96,7 +96,7 @@ const Register = props => (
                   <Label htmlFor="topic">Topics</Label>
                   <Select id="topic" value={topic} onChange={onChangeTopic}>
                     {topicsList.map(each => (
-                      <option value={each.id} key={each.id}>
+                      <option key={each.id} value={each.id}>
                         {each.displayText}
                       </option>
                     ))}
